@@ -1,0 +1,176 @@
+body {
+  font: 34px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  background-image: url("tlo.jpg");;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+li > button{
+	font-size: 16px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.board{
+	background-image: url("square.png");	
+}
+
+.game-board{
+	float: left;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  /*background: #678;*/
+  background: rgba(0, 0, 0, 0.0);
+  border: 1px solid #999;
+  float: left;
+  font-size: 134px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #abc;
+  height: 144px;
+  width: 144px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  
+}
+
+.light-square
+{
+	background: rgba(119, 119, 170, 0.7);
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.moveBtn{
+	background-color: #3bff11;
+}
+
+.moveBtn:hover{
+	background-color: #2aee00;
+}
+
+.game {
+	/*background-color: #ff5e00;*/
+	/* https://cssgradient.io/ */
+	
+	background-image: linear-gradient(to right, red, yellow, green);
+	height: 710px;
+  border: 5px solid #33aa55;
+  padding: 30px 100px;
+  margin: auto;
+  width: 840px;
+  text-align: center;
+}
+
+.game-info {
+	font-size: 24px;
+	float: left;
+	margin-left: 40px;
+	text-align: left;
+}
+
+/* Toogle switch */
+
+.switch {
+	margin: 10px;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.desc-switch {
+	/*background-color: #ddd;*/
+	background: #FF0000;
+background: -webkit-repeating-linear-gradient(to top right, #FF0000 0%, #00FF00 0%, #FF0000 100%);
+background: -moz-repeating-linear-gradient(to top right, #FF0000 0%, #00FF00 0%, #FF0000 100%);
+background: repeating-linear-gradient(to top right, #FF0000 0%, #00FF00 0%, #FF0000 100%);
+
+	width: 320px;
+	position: relative;
+	top: 10px;
+	padding: 20px;
+	border: 5px solid #000;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.triangle {
+	position: relative;
+	bottom: -20px;
+    width: 0;
+    height: 0;
+    border: solid 20px;
+    border-color: black transparent transparent transparent;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  /*background-color: #2196F3;*/
+  background-color: #000;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.rounded {
+  border-radius: 34px;
+}
+
+.slider.rounded:before {
+  border-radius: 50%;
+}
